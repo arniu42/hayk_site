@@ -39,5 +39,12 @@ body {
 }
 
 .title {
-  border-left:1px solid black;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px){
+  .title {
+    text-align: left;
+    border-left:1px solid black;
+  }
 }
