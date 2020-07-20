@@ -16,10 +16,6 @@ body {
   background-color: coral;
 }
 
-#aboutme {
-  margin-left: 50px;
-}
-
 #aboutme #myname {
   font-size: 1.5em;
 }
@@ -46,5 +42,8 @@ body {
   .title {
     text-align: left;
     border-left:1px solid black;
+  }
+  #aboutme {
+    margin-left: 50px;
   }
 }
