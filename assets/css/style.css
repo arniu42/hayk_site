@@ -20,6 +20,10 @@ body {
   margin-left: 50px;
 }
 
+#aboutme #myname {
+  font-size: 1.5em;
+}
+
 .card {
   border: hidden;
 }
@@ -32,4 +36,8 @@ body {
 
 .text-muted {
   display: none;
+}
+
+.title {
+  border-left:1px solid black;
 }
