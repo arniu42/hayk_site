@@ -1,19 +1,50 @@
 body {
-  font-family: monospace;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 16px;
 }
 
 #mypic {
-  background-image: url("../images/mypic.jpg");
+  background: url("../images/mypic.jpg");
   background-size: cover;
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
-  margin: auto;
+  width: 145%;
+  height: 145%;
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  margin: 50%;
+}
+
+#mypiccontainer {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  overflow: hidden;
+  border: 4px solid white;
+}
+
+@media screen and (min-width: 992px) {
+  #mypiccontainer {
+    width: 250px;
+    height: 250px;
+    margin: 0 25%;
+  }
+}
+@media screen and (max-width: 992px) {
+  #mypiccontainer {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-top: 50px;
+  }
 }
 
 #header {
   height: 720px;
   background-color: coral;
+}
+
+#aboutme {
+  font-size: 1.25em;
 }
 
 #aboutme #myname {
@@ -38,13 +69,39 @@ body {
   text-align: center;
 }
 
-@media screen and (min-width: 768px){
+.mytitle {
+  margin-bottom: 0px;
+}
+
+@media screen and (min-width: 992px) {
   .title {
     text-align: left;
     border-left:1px solid black;
   }
   #aboutme {
     margin-left: 50px;
+  }
+  #header-row {
+    max-width: 1140px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card-columns {
+    column-count: 3;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-columns {
+    column-count: 1;
   }
 }
 
