@@ -19,6 +19,17 @@ body {
 #aboutme {
   margin-left: 50px;
 }
-.card{
+
+.card {
   border: hidden;
+}
+
+.highlight {
+  background: #fff899;
+  padding: 2px 5px;
+  display: inline-block;
+}
+
+.text-muted {
+  display: none;
 }
