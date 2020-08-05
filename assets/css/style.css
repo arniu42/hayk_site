@@ -117,7 +117,7 @@ header .overlay {
   bottom: 0px;
   left: 0px;
   border-style: solid;
-  border-color: white;
+  border-color: #CCC;
 }
 #mypiccontainer:after {
   border-top: 0px;
@@ -250,8 +250,19 @@ header .overlay {
 }
 
 /* TIMELINE */
+#timeline {
+  background-color: #2f2f2f;
+}
+#timeline #timeline-title h1 {
+  color: #f2f2f2;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.25);
+}
+
 .mytimeline {
   font-family: "Ubuntu Mono", monospace;
+}
+.mytimeline .tl-headline {
+  display: none;
 }
 .mytimeline .tl-attribution {
   display: none;
@@ -294,10 +305,17 @@ header .overlay {
 .mytimeline .tl-timeaxis-minor {
   display: none !important;
 }
+.mytimeline .tl-timegroup-message {
+  display: none;
+}
 .mytimeline #gs_01-marker .tl-timemarker-content-container, .mytimeline #gs_03-marker .tl-timemarker-content-container {
   background-color: green;
 }
-.mytimeline #gs_02-marker .tl-timemarker-content-container, .mytimeline #gs_04-marker .tl-timemarker-content-container {
+.mytimeline #gs_02-marker .tl-timemarker-content-container,
+.mytimeline #gs_04-marker .tl-timemarker-content-container,
+.mytimeline #bs_01-marker .tl-timemarker-content-container,
+.mytimeline #bs_02-marker .tl-timemarker-content-container,
+.mytimeline #bs_03-marker .tl-timemarker-content-container {
   background-color: royalblue;
 }
 .mytimeline #gs_05-marker .tl-timemarker-content-container {

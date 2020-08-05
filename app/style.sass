@@ -2,8 +2,11 @@ $main-font: 'Ubuntu Mono', monospace
 $main-fontsize-mobile: 28px
 $main-fontsize: 16px
 
+$small-screen: 992px
+
 $my-image: url("../images/mypic1.png")
 
+// COLORS:
 $color-highlight: #fff899
 
 $color-unpublished: green
@@ -13,16 +16,18 @@ $color-codedev: #CD5C5C
 $color-undergradtimeline: lightblue
 $color-phdtimeline: yellow
 
-$small-screen: 992px
+$lightblue: #41B6E6
+$lightpink: #DB3EB1
+
+$whiteish: #f2f2f2
+$grayish: #CCC
+$blackish: #2f2f2f
 
 @mixin gradient($direction, $list)
   background: -webkit-linear-gradient($direction, $list)
   background: -moz-linear-gradient($direction, $list)
   background: -o-linear-gradient($direction, $list)
   background: linear-gradient($direction, $list)
-
-$lightblue: #41B6E6
-$lightpink: #DB3EB1
 
 body
   font-family: $main-font
@@ -122,7 +127,7 @@ header .overlay
     bottom: 0px
     left: 0px
     border-style: solid
-    border-color: white
+    border-color: $grayish
 
   &:after
     border-top: 0px
@@ -230,8 +235,18 @@ header .overlay
 
 /* TIMELINE
 
+#timeline
+  background-color: $blackish
+
+  #timeline-title h1
+    color: $whiteish
+    border-bottom: 1px solid transparentize($grayish, 0.75)
+
 .mytimeline
   font-family: $main-font
+
+  .tl-headline
+    display: none
 
   .tl-attribution
     display: none
@@ -250,19 +265,19 @@ header .overlay
     .tl-slidenav-title, .tl-slidenav-description
       text-shadow: none !important
       opacity: 0.45
-      color: #CCC !important
+      color: $grayish !important
 
   .tl-timegroup-message
     margin-left: 40px
     text-shadow: none
-    color: #CCC
+    color: $grayish
 
   .tl-timemarker-content-container
     box-shadow: none !important
     border-radius: 0px
 
   .tl-timemarker h2
-    color: #CCC !important
+    color: $grayish !important
 
   .tl-timeera-color1 .tl-timeera-background
     background-color: $color-undergradtimeline !important
@@ -276,10 +291,25 @@ header .overlay
   .tl-timeaxis-minor
     display: none !important
 
+  .tl-timegroup-message
+    display: none
+    // z-index: 100
+    // padding-left: 10px
+    // padding-right: 10px
+    // background-color: transparentize($whiteish, 0.85)
+    // -webkit-backdrop-filter: blur(10px)
+    // backdrop-filter: blur(10px)
+    // font-size: 0.8em
+    // line-height: 0.8em
+
   #gs_01-marker .tl-timemarker-content-container, #gs_03-marker .tl-timemarker-content-container
     background-color: $color-unpublished
 
-  #gs_02-marker .tl-timemarker-content-container, #gs_04-marker .tl-timemarker-content-container
+  #gs_02-marker .tl-timemarker-content-container,
+  #gs_04-marker .tl-timemarker-content-container,
+  #bs_01-marker .tl-timemarker-content-container,
+  #bs_02-marker .tl-timemarker-content-container,
+  #bs_03-marker .tl-timemarker-content-container
     background-color: $color-published
 
   #gs_05-marker .tl-timemarker-content-container
